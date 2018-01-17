@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Speedway Score Keeper</string>
+    <string name="name1">Home</string>
+    <string name="name2">Guest</string>
+    <string name="score1">0</string>
+    <string name="score2">0</string>
+    <string name="hp1">First Home\nPlayer</string>
+    <string name="hp2">Second Home\nPlayer</string>
+    <string name="gp1">First Guest\nPlayer</string>
+    <string name="gp2">Second Guest\nPlayer</string>
+    <string name="points3">+ 3 POINTS</string>
+    <string name="points2">+ 2 POINTS</string>
+    <string name="points1"> + 1 POINT </string>
+    <string name="but_res">reset</string>
+</resources>

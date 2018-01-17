@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/speedway2p"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/middle">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_back"
+                android:gravity="center"
+                android:text="@string/name1"
+                android:textColor="@color/text"
+                android:textSize="@dimen/normaltext" />
+
+            <TextView
+                android:id="@+id/home_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/middle"
+                android:background="@color/text_back"
+                android:gravity="center"
+                android:text="@string/score1"
+                android:textColor="@color/text"
+                android:textSize="@dimen/score" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_back"
+                android:gravity="center"
+                android:text="@string/name2"
+                android:textColor="@color/text"
+                android:textSize="@dimen/normaltext" />
+
+            <TextView
+                android:id="@+id/guest_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/middle"
+                android:background="@color/text_back"
+                android:gravity="center"
+                android:text="@string/score2"
+                android:textColor="@color/text"
+                android:textSize="@dimen/score" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/little"
+                        android:background="@color/text_back"
+                        android:drawableLeft="@drawable/ic_helmet_red"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/middle"
+                        android:text="@string/hp1"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/normaltext" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add3ToH"
+                        android:text="@string/points3" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add2ToH"
+                        android:text="@string/points2" />
+
+                    <Button
+                        android:layout_width="@dimen/button"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add1ToH"
+                        android:text="@string/points1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/little"
+                        android:layout_marginTop="@dimen/middle"
+                        android:background="@color/text_back"
+                        android:drawableLeft="@drawable/ic_helmet_blue"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/helm"
+                        android:text="@string/hp2"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/normaltext" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add3ToH"
+                        android:text="@string/points3" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add2ToH"
+                        android:text="@string/points2" />
+
+                    <Button
+                        android:layout_width="@dimen/button"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add1ToH"
+                        android:text="@string/points1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/background_light" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/little"
+                        android:background="@color/text_back"
+                        android:drawableLeft="@drawable/ic_helmet_yellow"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/middle"
+                        android:text="@string/gp1"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/normaltext" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add3ToG"
+                        android:text="@string/points3" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add2ToG"
+                        android:text="@string/points2" />
+
+                    <Button
+                        android:layout_width="@dimen/button"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add1ToG"
+                        android:text="@string/points1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/little"
+                        android:layout_marginTop="@dimen/middle"
+                        android:background="@color/text_back"
+                        android:drawableLeft="@drawable/ic_helmet_white"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/helm"
+                        android:text="@string/gp2"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/normaltext" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add3ToG"
+                        android:text="@string/points3" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add2ToG"
+                        android:text="@string/points2" />
+
+                    <Button
+                        android:layout_width="@dimen/button"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:onClick="add1ToG"
+                        android:text="@string/points1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/middle"
+                android:layout_marginTop="@dimen/middle"
+                android:onClick="reset"
+                android:text="@string/but_res" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
