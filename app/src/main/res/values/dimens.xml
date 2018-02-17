@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="little">6dp</dimen>
     <dimen name="middle">20dp</dimen>
-    <dimen name="normaltext">18sp</dimen>
-    <dimen name="score">50sp</dimen>
     <dimen name="huge">60dp</dimen>
     <dimen name="button">97dp</dimen>
-    <dimen name="little">6dp</dimen>
     <dimen name="helm">15dp</dimen>
-
-
+    <dimen name="zero">0dp</dimen>
+    <dimen name="line">1dp</dimen>
+    <dimen name="normaltext">18sp</dimen>
+    <dimen name="score">50sp</dimen>
 </resources>

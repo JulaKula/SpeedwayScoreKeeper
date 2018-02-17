@@ -10,6 +10,6 @@
     <string name="gp2">Second Guest\nPlayer</string>
     <string name="points3">+ 3 POINTS</string>
     <string name="points2">+ 2 POINTS</string>
-    <string name="points1"> + 1 POINT </string>
+    <string name="points1">+ 1 POINT </string>
     <string name="but_res">reset</string>
 </resources>

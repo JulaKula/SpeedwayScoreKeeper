@@ -26,39 +26,34 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Displays the given score for home
+    // Display the given score for home
     public void displayForHome(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.home_score);
-        scoreView.setText(String.valueOf(score))
-        ;
+        TextView scoreView = findViewById(R.id.home_score);
+        scoreView.setText(String.valueOf(score));
     }
 
 
-    // Next three methods add 3,2 or 1 point to home score
+    // Next three methods add 3, 2 or 1 point to home score
     public void add3ToH(View v) {
         scoreHome = scoreHome + 3;
         displayForHome(scoreHome);
-
     }
 
     public void add2ToH(View v) {
         scoreHome = scoreHome + 2;
         displayForHome(scoreHome);
-
     }
 
     public void add1ToH(View v) {
         scoreHome = scoreHome + 1;
         displayForHome(scoreHome);
-
     }
 
 
-    // Displays the given score for guest
+    // Display the given score for guest
     public void displayForGuest(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.guest_score);
-        scoreView.setText(String.valueOf(score))
-        ;
+        TextView scoreView = findViewById(R.id.guest_score);
+        scoreView.setText(String.valueOf(score));
     }
 
 
@@ -66,19 +61,16 @@ public class MainActivity extends AppCompatActivity {
     public void add3ToG(View v) {
         scoreGuest = scoreGuest + 3;
         displayForGuest(scoreGuest);
-
     }
 
     public void add2ToG(View v) {
         scoreGuest = scoreGuest + 2;
         displayForGuest(scoreGuest);
-
     }
 
     public void add1ToG(View v) {
         scoreGuest = scoreGuest + 1;
         displayForGuest(scoreGuest);
-
     }
 
 
