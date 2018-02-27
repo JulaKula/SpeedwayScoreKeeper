@@ -7,31 +7,31 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    static final String current_home_score = "home_score";
-    static final String current_guest_score = "guest_score";
+    private static final String CURRENT_HOME_SCORE = "home_score";
+    private static final String CURRENT_GUEST_SCORE = "guest_score";
 
-    int scoreHome;
-    int scoreGuest;
+    private int scoreHome, scoreGuest;
+    private TextView homeScoreView, guestScoreView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        homeScoreView = findViewById(R.id.home_score);
+        guestScoreView = findViewById(R.id.guest_score);
 
         // Check whether we're recreating a previously destroyed instance
         if (savedInstanceState != null) {
             // Restore both scores from saved state
-            scoreHome = savedInstanceState.getInt(current_home_score);
-            scoreGuest = savedInstanceState.getInt(current_guest_score);
+            scoreHome = savedInstanceState.getInt(CURRENT_HOME_SCORE);
+            scoreGuest = savedInstanceState.getInt(CURRENT_GUEST_SCORE);
         }
     }
 
     // Display the given score for home
     public void displayForHome(int score) {
-        TextView scoreView = findViewById(R.id.home_score);
-        scoreView.setText(String.valueOf(score));
+        homeScoreView.setText(String.valueOf(score));
     }
-
 
     // Next three methods add 3, 2 or 1 point to home score
     public void add3ToH(View v) {
@@ -49,13 +49,10 @@ public class MainActivity extends AppCompatActivity {
         displayForHome(scoreHome);
     }
 
-
     // Display the given score for guest
     public void displayForGuest(int score) {
-        TextView scoreView = findViewById(R.id.guest_score);
-        scoreView.setText(String.valueOf(score));
+        guestScoreView.setText(String.valueOf(score));
     }
-
 
     // Next three methods add 3,2 or 1 point to guest score
     public void add3ToG(View v) {
@@ -73,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
         displayForGuest(scoreGuest);
     }
 
-
     // Reset both scores
     public void reset(View v) {
         scoreHome = 0;
@@ -82,27 +78,22 @@ public class MainActivity extends AppCompatActivity {
         displayForGuest(scoreGuest);
     }
 
-
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
 
         // Save current game state
-        savedInstanceState.putInt(current_home_score, scoreHome);
-        savedInstanceState.putInt(current_guest_score, scoreGuest);
-
-        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt(CURRENT_HOME_SCORE, scoreHome);
+        savedInstanceState.putInt(CURRENT_GUEST_SCORE, scoreGuest);
     }
-
 
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
         // Restore the game state from saved instance
-        scoreHome = savedInstanceState.getInt(current_home_score);
-        scoreGuest = savedInstanceState.getInt(current_guest_score);
+        scoreHome = savedInstanceState.getInt(CURRENT_HOME_SCORE);
+        scoreGuest = savedInstanceState.getInt(CURRENT_GUEST_SCORE);
         displayForHome(scoreHome);
         displayForGuest(scoreGuest);
     }
 }
-
-
